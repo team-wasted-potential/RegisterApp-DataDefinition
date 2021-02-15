@@ -38,17 +38,3 @@ RETURNING id, createdon;
 
 --DELETE FROM product;
 
-CREATE TABLE employee (
-  id uuid NOT NULL DEFAULT gen_random_uuid(),
-  first_name NOT NULL DEFAULT(''),
-  last_name NOT NULL DEFAULT(''),
-  employee_id int NOT NULL DEFAULT(00000),
-  active NOT NULL DEFAULT(''),
-  class NOT NULL DEFAULT(''),
-  manager NOT NULL DEFAULT(''),
-  password NOT NULL DEFAULT(''),
-  createdon timestamp without time zone NOT NULL DEFAULT now(),
-  CONSTRAINT product_pkey PRIMARY KEY (id)
-) WITH (
-  OIDS=FALSE
-);
